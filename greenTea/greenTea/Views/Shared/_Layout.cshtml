@@ -51,7 +51,35 @@
             &copy; 2022 - greenTea - <a asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.filterizr.min.js"></script>
+
+    <!--FilterizR-->
+    <script>
+        const filterizr = $('.filter-container').filterizr({
+            controlsSelector: '.filtr-controls',
+            gridItemsSelector: '.filtr-item',
+            spiner: {
+                enabled: true
+            }
+        })
+        $("#shuffle").click(() => {
+            filterizr.filterizr('shuffle')
+        })
+        const sortFilterizr = (order) => {
+            filterizr.filterizr('sort', $("select: selected").val(), order)
+        }
+        $("#asc-btn").click(() => {
+            sortFilterizr('asc')
+        })
+        $("#des-btn").click(() => {
+            sortFilterizr('des')
+        })
+    </script>
+    <!--FilterizR-->
+    
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
