@@ -25,6 +25,13 @@ namespace greenTea.Controllers
             return View(await contexto.ToListAsync());
         }
 
+        // GET: CardTables
+        public async Task<IActionResult> Index2()
+        {
+            var contexto = _context.CardTables.Include(c => c.Categoria);
+            return View(await contexto.ToListAsync());
+        }
+
         // GET: CardTables/Details/5
         public async Task<IActionResult> Details(int? id)
         {

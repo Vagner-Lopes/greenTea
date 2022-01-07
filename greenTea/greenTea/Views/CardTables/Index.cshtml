@@ -2,50 +2,66 @@
 
 @{
     ViewData["Title"] = "Index";
+
+    List<Categoria> categotias = new List<Categoria>();
+    List<string> nomes = new List<string>();
+
 }
 
 <h1>Tabela Pictogramas</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Criar Novo</a>
+    <a asp-action="Index2" class="btn btn-primary">Editar</a>
 </p>
 <hr>
-<p>
-    <a asp-action="Index"class="btn btn-primary">Criar Novo</a> | <a class="btn btn-primary">Criar Novo</a> | <button value="1">brinquedo</button>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Img)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Img)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria.Nome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fas fa-user-edit"></i></a> |
-                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-info-circle"></i></a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container">
+    <h1 class="text-center pt-3">
+        Teste de filtro
+    </h1>
+
+    <div class="filters">
+
+        <!--Menu de opções-->
+        <ul class="btn-group simplefilter d-flex p-2">
+            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="all">Todos</li>
+
+            @foreach (var item in Model)
+            {
+                if(!nomes.Contains(item.Categoria.Nome))
+                {
+                    nomes.Add(item.Categoria.Nome);
+                    <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="@Html.DisplayFor(modelItem => item.Categoria.Nome)">
+                        @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                    </li>
+                }
+            }
+        </ul>
+        <!--Menu de opções-->
+
+        <div class="additonal p-2 d-flex justify-content-between">
+            <button class="btn btn-warning" id="shuffle">Embaralhar</button>
+            <div class="input-group pl-2 pr-2">
+                <input type="text" value="" placeholder="buscar..." class="form-control filtr-controls filtr-search" data-search>
+            </div>
+        </div>
+    </div>
+
+    <!--Cards-->
+    <div class="cards d-flex row filter-container">
+
+        @foreach (var item in Model)
+        {
+            <div class="card filtr-item col-lg-4" data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value" data-author="H">
+                <img src="@Html.DisplayFor(modelItem => item.Img)" alt="sample" />
+                <div class="filtr-title">@Html.DisplayFor(modelItem => item.Nome)</div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
