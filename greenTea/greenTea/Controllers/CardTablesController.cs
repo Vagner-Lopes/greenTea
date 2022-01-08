@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using greenTea.Models;
+using greenTea.Controllers;
 
 namespace greenTea.Controllers
 {
@@ -69,7 +70,7 @@ namespace greenTea.Controllers
             {
                 _context.Add(cardTable);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index2));
             }
             ViewData["CategoriaID"] = new SelectList(_context.Categorias, "Id", "Nome", cardTable.CategoriaID);
             return View(cardTable);
@@ -122,7 +123,7 @@ namespace greenTea.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index2));
             }
             ViewData["CategoriaID"] = new SelectList(_context.Categorias, "Id", "Nome", cardTable.CategoriaID);
             return View(cardTable);

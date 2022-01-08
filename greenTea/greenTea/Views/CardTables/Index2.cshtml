@@ -3,61 +3,43 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container p-0 m-0">
+    <div class="d-flex justify-content-around align-items-center">
+        <h1>Tabela Pictogramas</h1>
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Criar Novo</a> | <a asp-action="Index" class="btn btn-primary">Voltar</a> |
+            <a asp-action="Categorias" class="btn btn-primary">Categoria</a>
+        </p>
+    </div>
 
-<h1>Tabela Pictogramas</h1>
-
-<p>
-    <a asp-action="Create" class="btn btn-primary">Criar Novo</a> | <a asp-action="Index" class="btn btn-primary">Voltar</a>
-</p>
-<hr>
-<div class="container">
-    <h1 class="text-center pt-3">
-        Teste de filtro
-    </h1>
-    <div class="additonal p-2 d-flex justify-content-between">
+    <hr>
+    <div class="additonal p-2 d-flex">
         <button class="btn btn-warning" id="shuffle">Embaralhar</button>
         <div class="input-group pl-2 pr-2">
             <input type="text" value="" placeholder="buscar..." class="form-control filtr-controls filtr-search" data-search>
         </div>
     </div>
 
-    <div class="filters">
+    <div class="cards row filter-container justify-content-around">
+        
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Img)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Nome)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Categoria)
-                    </th>
-                </tr>
-            </thead>
-            <tbody  class=" filter-container" style=" width:100vh;">
-                @foreach (var item in Model)
-                {
-                    <tr class=" filtr-item "  style="display: block" data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value">
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Img)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Nome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Categoria.Nome)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fas fa-user-edit"></i></a> |
-                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-info-circle"></i></a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+
+            @foreach (var item in Model)
+            {
+        <div class="container p-5 m-0">
+            <div class="card filtr-item col-sm-6 col-md-4 col-lg-3 card-edit " data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value">
+                <img src="@Html.DisplayFor(modelItem => item.Img)" alt="sample" />
+                <h4 class="bg-secondary">@Html.DisplayFor(modelItem => item.Nome)</h4>
+                <h5>@Html.DisplayFor(modelItem => item.Categoria.Nome)</h5>
+                <div class="card-edit-botoes" style="display: block">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fas fa-user-edit"></i></a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fas fa-info-circle"></i></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
+                </div>
+            </div>
+        </div>
+            }
+        </div>
+    
+
 </div>
