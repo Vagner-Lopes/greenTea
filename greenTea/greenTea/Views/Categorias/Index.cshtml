@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Categoria</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Cria novo</a>
 </p>
 <table class="table">
     <thead>
@@ -28,7 +28,10 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cor)
+                <div class="categoria-cores" style="background: @Html.DisplayFor(modelItem => item.Cor);">
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </div>
+                
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fas fa-user-edit"></i></a> | 

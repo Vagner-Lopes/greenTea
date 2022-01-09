@@ -442,3 +442,4 @@ C:\estudos\repositorios\greenTea\greenTea\greenTea\obj\Debug\net5.0\Razor\Views\
 C:\estudos\repositorios\greenTea\greenTea\greenTea\obj\Debug\net5.0\Razor\Views\Home\Sobre.cshtml.g.cs
 C:\estudos\repositorios\greenTea\greenTea\greenTea\obj\Debug\net5.0\Razor\Views\CardTables\Index2.cshtml.g.cs
 C:\estudos\repositorios\greenTea\greenTea\greenTea\obj\Debug\net5.0\Razor\Views\CardTables\Index2 - Cópia.cshtml.g.cs
+C:\estudos\repositorios\greenTea\greenTea\greenTea\obj\Debug\net5.0\Razor\Views\Shared\_Layout - Cópia.cshtml.g.cs

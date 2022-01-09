@@ -8,15 +8,13 @@
 
 }
 
-<h1>Tabela Pictogramas</h1>
 
-<p>
+<p class="d-flex justify-content-end  ">
     <a asp-action="Index2" class="btn btn-primary">Editar</a>
 </p>
-<hr>
-<div class="container">
+<div class="container justify-content-center align-items-center  ">
     <h1 class="text-center pt-3">
-        Teste de filtro
+        Tabela Pictogramas
     </h1>
 
     <div class="filters">
@@ -27,7 +25,7 @@
 
             @foreach (var item in Model)
             {
-                if(!nomes.Contains(item.Categoria.Nome))
+                if (!nomes.Contains(item.Categoria.Nome))
                 {
                     nomes.Add(item.Categoria.Nome);
                     <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="@Html.DisplayFor(modelItem => item.Categoria.Nome)">
@@ -37,24 +35,20 @@
             }
         </ul>
         <!--Menu de opções-->
-
-        <div class="additonal p-2 d-flex justify-content-between">
-            <button class="btn btn-warning" id="shuffle">Embaralhar</button>
-            <div class="input-group pl-2 pr-2">
-                <input type="text" value="" placeholder="buscar..." class="form-control filtr-controls filtr-search" data-search>
-            </div>
-        </div>
     </div>
 
     <!--Cards-->
-    <div class="cards d-flex row filter-container">
+    <div class="cards d-flex row filter-container ml-4">
 
         @foreach (var item in Model)
         {
-            <div class="card filtr-item col-lg-4" data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value" data-author="H">
-                <img src="@Html.DisplayFor(modelItem => item.Img)" alt="sample" />
-                <div class="filtr-title">@Html.DisplayFor(modelItem => item.Nome)</div>
+        <div class="card filtr-item col-3 col-sm-3 col-lg-4 card-edit" style="height: 220px;background: @Html.DisplayFor(modelItem => item.Categoria.Cor)"
+             data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value" data-author="H">
+            <img src="@Html.DisplayFor(modelItem => item.Img)" alt="sample" />
+            <div class="filtr-title card-edit-textos">
+                <p>@Html.DisplayFor(modelItem => item.Nome)</p>
             </div>
+        </div>
         }
     </div>
 </div>

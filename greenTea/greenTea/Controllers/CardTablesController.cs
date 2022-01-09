@@ -70,7 +70,7 @@ namespace greenTea.Controllers
             {
                 _context.Add(cardTable);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index2));
+                return RedirectToAction(nameof(Create)); //o correto eh redirecionar para Index2, trocar depois
             }
             ViewData["CategoriaID"] = new SelectList(_context.Categorias, "Id", "Nome", cardTable.CategoriaID);
             return View(cardTable);
