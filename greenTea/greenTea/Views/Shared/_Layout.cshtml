@@ -1,38 +1,43 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - greenTea</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">greenTea</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
+            <div class="container text-center position-relative justify-content-around" style="width: 100%;">
+                <div class="">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo" src="~/media/greenTea.png" alt="greenTea" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <ul class="navbar-nav flex-grow-1 nav-ul position-absolute">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white btn btn-info m-1 btn-nav-1" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CardTables" asp-action="Index">Tabela</a>
+                            <a class="nav-link text-white btn btn-primary m-1 btn-nav-2" asp-area="" asp-controller="CardTables" asp-action="Index">Tabela</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
+                            <a class="nav-link text-white btn btn-success m-1 btn-nav-3" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                            <a class="nav-link text-white btn btn-warning m-1 btn-nav-4" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
+                            <a class="nav-link text-white btn btn-danger m-1 btn-nav-5" asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
                         </li>
                     </ul>
                 </div>
@@ -45,12 +50,40 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="mt-5 footer text-muted">
         <div class="container">
-            &copy; 2022 - greenTea - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - greenTea - <a asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.filterizr.min.js"></script>
+
+    <!--FilterizR-->
+    <script>
+        const filterizr = $('.filter-container').filterizr({
+            controlsSelector: '.filtr-controls',
+            gridItemsSelector: '.filtr-item',
+            spiner: {
+                enabled: true
+            }
+        })
+        $("#shuffle").click(() => {
+            filterizr.filterizr('shuffle')
+        })
+        const sortFilterizr = (order) => {
+            filterizr.filterizr('sort', $("select: selected").val(), order)
+        }
+        $("#asc-btn").click(() => {
+            sortFilterizr('asc')
+        })
+        $("#des-btn").click(() => {
+            sortFilterizr('des')
+        })
+    </script>
+    <!--FilterizR-->
+    
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

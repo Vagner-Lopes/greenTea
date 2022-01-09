@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using greenTea.Models;
+using greenTea.Controllers;
 
 namespace greenTea.Controllers
 {
@@ -20,6 +21,13 @@ namespace greenTea.Controllers
 
         // GET: CardTables
         public async Task<IActionResult> Index()
+        {
+            var contexto = _context.CardTables.Include(c => c.Categoria);
+            return View(await contexto.ToListAsync());
+        }
+
+        // GET: CardTables
+        public async Task<IActionResult> Index2()
         {
             var contexto = _context.CardTables.Include(c => c.Categoria);
             return View(await contexto.ToListAsync());
@@ -62,7 +70,7 @@ namespace greenTea.Controllers
             {
                 _context.Add(cardTable);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Create)); //o correto eh redirecionar para Index2, trocar depois
             }
             ViewData["CategoriaID"] = new SelectList(_context.Categorias, "Id", "Nome", cardTable.CategoriaID);
             return View(cardTable);
@@ -115,7 +123,7 @@ namespace greenTea.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index2));
             }
             ViewData["CategoriaID"] = new SelectList(_context.Categorias, "Id", "Nome", cardTable.CategoriaID);
             return View(cardTable);

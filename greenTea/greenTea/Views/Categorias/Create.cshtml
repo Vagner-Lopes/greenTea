@@ -1,12 +1,11 @@
 ﻿@model greenTea.Models.Categoria
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar";
 }
 
-<h1>Create</h1>
+<h1>Cria nova categoria</h1>
 
-<h4>Categoria</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,19 +18,28 @@
             </div>
             <div class="form-group">
                 <label asp-for="Cor" class="control-label"></label>
-                <input asp-for="Cor" class="form-control" />
+                <select  asp-for="Cor" class="form-control">
+                    <option value="#0E9AFF">Azul Claro</option>
+                    <option value="#005AFF">Azul</option>
+                    <option value="#03CB8F">Verde Claro</option>
+                    <option value="#00A11F">Verde</option>
+                    <option value="#EAE000">Amarelo</option>
+                    <option value="#FFA012">Laranja</option>
+                    <option value="#DF0000">Vermelho</option>
+                    <option value="#bf5317">Marrom</option>
+                    <option value="#8940c2">Roxo</option>
+                    <option value="#e589e7">Rosa</option>
+                </select>
                 <span asp-validation-for="Cor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-success m-2" /> | 
+                <a asp-action="Index" class="btn btn-primary m-2">Voltar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

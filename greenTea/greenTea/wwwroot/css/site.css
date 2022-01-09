@@ -69,3 +69,106 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/*==========cards========================== */
+.card {
+ 
+    border: 0px;
+    padding: 15px;
+}
+.card-edit-tb {
+    text-align: center;
+    padding: 6px;
+    max-width: 180px;
+    height: 220px;
+    border: #fff solid 3px;
+}
+
+    .card-edit-tb img {
+        height: 170px;
+        border: #000 solid 3px;
+        background: white;
+    }
+
+
+.card-edit {
+    text-align: center;
+    padding: 6px;
+    max-width: 180px;
+    height: 270px;
+    border: #fff solid 3px;
+}
+
+    .card-edit img {
+        height: 170px;
+        border: #000 solid 3px;
+        background: white;
+    }
+
+.card-edit-textos {
+    border: #000 solid 3px;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    background: white;
+}
+
+.card-edit-textos p{
+    color: black;
+    font-size: 18px;
+    line-height: 19px;
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.card-edit-botoes{
+    margin-bottom: 3px;
+}
+
+    .card-edit-botoes a {
+        margin: 8px;
+    }
+
+/*==============filter================== */
+.filter-container {
+}
+
+.filtr-title {
+
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+/*============nav===================== */
+
+.logo {
+    max-width: 70px;
+    margin-right: 100px;
+}
+
+.nav-ul{
+    top: 60px;
+}
+.ttt
+{
+    padding: 5px !important;
+}
+
+/*============nav===================== */
+
+.categoria-cores {
+    color: white;
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+
+
+}
