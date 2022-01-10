@@ -20,15 +20,15 @@
     <div class="filters">
 
         <!--Menu de opções-->
-        <ul class="btn-group simplefilter d-flex p-2">
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="all">Todos</li>
+        <ul class="btn-group simplefilter d-flex  flex-wrap p-2">
+            <li class="btn btn-primary m-1 filtr-controls rounded-pill" data-filter="all">Todos</li>
 
             @foreach (var item in Model)
             {
                 if (!nomes.Contains(item.Categoria.Nome))
                 {
                     nomes.Add(item.Categoria.Nome);
-                    <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="@Html.DisplayFor(modelItem => item.Categoria.Nome)">
+                    <li class="btn btn-primary m-1 filtr-controls rounded-pill" data-filter="@Html.DisplayFor(modelItem => item.Categoria.Nome)">
                         @Html.DisplayFor(modelItem => item.Categoria.Nome)
                     </li>
                 }
@@ -42,7 +42,7 @@
 
         @foreach (var item in Model)
         {
-        <div class="card filtr-item col-3 col-sm-3 col-lg-4 card-edit" style="height: 220px;background: @Html.DisplayFor(modelItem => item.Categoria.Cor)"
+        <div class="card filtr-item col-3 col-sm-3 col-lg-4 ml-4 card-edit" style="height: 220px;background: @Html.DisplayFor(modelItem => item.Categoria.Cor)"
              data-category="@Html.DisplayFor(modelItem => item.Categoria.Nome)" data-sort="value" data-author="H">
             <img src="@Html.DisplayFor(modelItem => item.Img)" alt="sample" />
             <div class="filtr-title card-edit-textos">

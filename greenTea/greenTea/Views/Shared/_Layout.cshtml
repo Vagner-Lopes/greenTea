@@ -7,55 +7,97 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candal&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:400,400i,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="~/css/Features-Boxed.css">
+    <link rel="stylesheet" href="~/css/Footer-Dark.css">
+    <link rel="stylesheet" href="~/css/Header-Blue.css">
+    <link rel="stylesheet" href="~/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="~/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="~/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="~/css/styles.css">
 </head>
-<body>
+<body class="position-relative">
     <header>
-
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 ">
-            <div class="container text-center position-relative justify-content-around" style="width: 100%;">
-                <div class="">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo" src="~/media/greenTea.png" alt="greenTea" /></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-12 offset-lg-0 text-center d-flex justify-content-lg-center" style="background: #fff;font-family: 'Bubblegum Sans', serif;">
+                    <a  asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand d-flex  align-self-end  align-items-end" style="color: rgb(25,135,84); font-size: 43px; font-style: italic; width: 300px; font-family: 'Bubblegum Sans', serif; font-weight: bold;">
+                        <img src="~/media/greenTea.png" style="width: 122px;">
+                        <h4 class="text-end align-items-end" style="font-family: 'Bubblegum Sans', serif;font-weight: bold;font-size: 46px;height: 59px;">green</h4>
+                        <h4 class="d-lg-flex align-items-end" style="font-family: 'Bubblegum Sans', serif; font-weight: bold; font-size: 59px; color: rgb(220,53,69);">T</h4>
+                        <h4 class="align-items-end" style="font-family: 'Bubblegum Sans', serif; font-weight: bold; font-size: 59px; color: rgb(255,193,7);">e</h4>
+                        <h4 class="align-items-end" style="font-family: 'Bubblegum Sans', serif; font-weight: bold; font-size: 59px; color: rgb(13,110,253);">a</h4>
+                    </a>
                 </div>
-
-                <div class="navbar-collapse collapse d-sm-inline-flex">
-                    <ul class="navbar-nav flex-grow-1 nav-ul position-absolute">
-                        <li class="nav-item">
-                            <a class="nav-link text-white btn btn-info m-1 btn-nav-1" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-white btn btn-primary m-1 btn-nav-2" asp-area="" asp-controller="CardTables" asp-action="Index">Tabela</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white btn btn-success m-1 btn-nav-3" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white btn btn-warning m-1 btn-nav-4" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white btn btn-danger m-1 btn-nav-5" asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
-                        </li>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg sticky-top d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center navigation-clean-search" style="background: linear-gradient(97deg, #00E4D0, #4D90E5), #6AbFdC;height: 74px;position: sticky;border-bottom: 10px solid #fff;">
+            <a class="navbar-brand"></a>
+            <div class="container ">
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: rgb(238,242,8);background: rgba(206,212,218,0.5);box-shadow: 1px 1px 2px 0px rgb(0,0,0);">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon" style="width: 35px;border-bottom-color: rgba(238,242,8,0);box-shadow: 0px 0px;"></span>
+                </button>
+                <div class="collapse navbar-collapse text-center d-lg-flex justify-content-lg-center align-items-lg-center" id="navcol-1" style="height: 60px;font-family: Kanit, sans-serif;font-weight: bold;font-size: 23px;color: #fff;position: relative;bottom: -30px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill " style="color: #fff;background: #03CB8F;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Index">HOME</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #9CC624;font-size: 23px;margin: 9px;" asp-area="" asp-controller="CardTables" asp-action="Index">PICTOGRAMA</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill text-nowrap" style="color: #fff;background: #0d94f5;font-size: 23px;margin: 9px;">W-NOISE</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FFA012;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Categorias" asp-action="Index">CATEGORIA</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FF7223;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Sobre">SOBRE</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FE4848;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Privacy">CONTATOS</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="containerfghfh">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="mt-5 footer text-muted">
+
+    <footer class="mt-5 footer-dark ">
         <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 style="color: #5AAFCC;">Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 style="color: #5AAFCC;">About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3 style="color: #5AAFCC;">Company Name</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
             &copy; 2022 - greenTea - <a asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
+            <p class="copyright">Company Name © 2022</p>
         </div>
     </footer>
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.filterizr.min.js"></script>
 
@@ -80,12 +122,18 @@
         $("#des-btn").click(() => {
             sortFilterizr('des')
         })
+
     </script>
     <!--FilterizR-->
-    
 
+
+    <script src="~/js/bs-init.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
