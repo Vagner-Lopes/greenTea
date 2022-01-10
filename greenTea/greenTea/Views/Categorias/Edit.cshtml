@@ -4,10 +4,14 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+
+<hr />
+<br />
 
 <div class="container">
-    <h4>Categoria</h4>
+    <div class="text-center">
+        <h1>Editando uma categoria</h1>
+    </div>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -35,17 +39,18 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-primary mr-3">Voltar</a> |
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger  m-2">Deletar</a> |
+                    <input type="submit" value="Salvar" class="btn btn-success ml-3" />
                 </div>
             </form>
         </div>
     </div>
-
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
-
 </div>
+
+
+
+
 
 
 @section Scripts {

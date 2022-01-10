@@ -1,77 +1,92 @@
 ﻿@{
-    ViewData["Title"] = "Contatos";
+    ViewData["Title"] = "Sobre/QuemSomos";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Página privacy alterada para Contatos</p>
+<hr />
+<br />
+
 <div class="container">
-    <h1 class="text-center pt-3">
-        Teste de filtro
-    </h1>
-    <div class="filters">
-        <ul class="btn-group simplefilter d-flex p-2">
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="all">Todos</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="1">Cidade</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="2">Industria</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="3">Natureza</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="4">Dia</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="5">Tarde</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-filter="6">Noite</li>
-            <li class="btn btn-primary m-1 filtr-controls badge-pill" data-multifilter="7">MultiFiltro</li>
-        </ul>
-        <div class="additional p-2 d-flex justify-content-between">
-            <button class="btn btn-warning" id="shuffle">Embaralhar</button>
-            <div class="input-group pl-2 pr-2">
-                <input type="text" value="" placeholder="buscar..." class="form-control filtr-controls filtr-search" data-search>
+
+
+    <section class="clean-block about-us">
+        <div class="container">
+            <div class="block-heading">
+                <h2 class="text-info">Sobre a gente</h2>
             </div>
-            <div class="input-group">
-                <div class="btn-group pr-2">
-                    <button class="btn btn-danger filtr-controls" id="asc-btn">Asc</button>
-                    <button class="btn btn-danger filtr-controls" id="des-btn">Des</button>
+            <br />
+            <hr />
+
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card">
+                        <img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Pedro</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
                 </div>
-                <select data-sortOrder class="custom-select filtr-controls">
-                    <option \value="sortData" class="filtr-controls">Ordenar por</option>
-                    <option value="sortData" class="filtr-controls">Autor</option>
-                </select>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card">
+                        <img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Vagner</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card">
+                        <img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Patric</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card">
+                        <img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Gabriel</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card">
+                        <img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Trumai</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card text-center clean-card">
+                        <img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar3.jpg">
+                        <div class="card-body info">
+                            <h4 class="card-title">Thais</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="cards d-flex row filter-container">
-        <div class="card filtr-item col-lg-4" data-category="1, 5" data-sort="value" data-author="">
-            <img src="~/media/city_1.jpg" alt="sample" />
-            <div class="filtr-title">Cidade 1</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="1, 6, 7" data-sort="value" data-author="">
-            <img src="~/media/city_2.jpg" alt="sample" />
-            <div class="filtr-title">Cidade 2</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="1, 4" data-sort="value" data-author="">
-            <img src="~/media/city_3.jpg" alt="sample" />
-            <div class="filtr-title">Cidade 3</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="2, 7" data-sort="value" data-author="">
-            <img src="~/media/industrial_1.jpg" alt="sample" />
-            <div class="filtr-title">Industria 1</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="2, 4" data-sort="value" data-author="">
-            <img src="~/media/industrial_2.jpg" alt="sample" />
-            <div class="filtr-title">Industria 2</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="2, 5" data-sort="value" data-author="">
-            <img src="~/media/industrial_3.jpg" alt="sample" />
-            <div class="filtr-title">Industria 3</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="3, 5" data-sort="value" data-author="">
-            <img src="~/media/nature_1.jpg" alt="sample" />
-            <div class="filtr-title">Natureza 1</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="3, 6, 7" data-sort="value" data-author="">
-            <img src="~/media/nature_2.jpg" alt="sample" />
-            <div class="filtr-title">Natureza 2</div>
-        </div>
-        <div class="card filtr-item col-lg-4" data-category="3, 4" data-sort="value" data-author="">
-            <img src="~/media/nature_3.jpg" alt="sample" />
-            <div class="filtr-title">Natureza 3</div>
-        </div>
-    </div>
+    </section>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
 </div>
+
+
+
+
