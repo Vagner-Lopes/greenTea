@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candal&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:400,400i,700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    
     <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="~/fonts/ionicons.min.css">
     <link rel="stylesheet" href="~/css/Features-Boxed.css">
@@ -25,18 +22,20 @@
     <link rel="stylesheet" href="~/css/Projects-Horizontal.css">
     <link rel="stylesheet" href="~/css/styles.css">
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dekko&amp;display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-<body class="position-relative">
-    <header>
+<body class="position-relative " style="font-family: Dekko, serif;">
+    <header style="font-family: Dekko, serif;">
         <div class="container ">
             <div class="row">
-                <div class="col-md-12 offset-lg-0 text-center d-flex justify-content-lg-center" style="background: #fff;font-family: 'Bubblegum Sans', serif;">
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand d-flex  align-self-end  align-items-end" style="color: rgb(25,135,84); font-size: 43px; font-style: italic; width: 300px; font-family: 'Bubblegum Sans', serif; font-weight: bold;">
+                <div class="col-md-12 offset-lg-0 text-center d-flex justify-content-lg-center" style="background: #fff;">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand d-flex  align-self-end  align-items-end" style="color: rgb(25,135,84); font-size: 43px; font-style: italic; position:sticky">
                         <img src="~/media/greenTea.png" style="width: 122px;">
-                        <h4 class="text-end align-items-end" style="font-family: 'Bubblegum Sans', serif;font-weight: bold;font-size: 46px;height: 59px;">green</h4>
-                        <h4 class="d-lg-flex align-items-end" style="font-family: 'Bubblegum Sans', serif; font-weight: bold; font-size: 59px; color: rgb(220,53,69);">T</h4>
-                        <h4 class="align-items-end" style="font-family: 'Bubblegum Sans', serif; font-weight: bold; font-size: 59px; color: rgb(255,193,7);">e</h4>
-                        <h4 class="align-items-end" style="font-family: 'Bubblegum Sans', serif; font-weight: bold; font-size: 59px; color: rgb(13,110,253);">a</h4>
+                        <h4 class="text-end align-items-end" style="font-weight: bold;font-size: 46px;height: 59px;">green</h4>                        
+                        <h4 class="d-lg-flex align-items-end" style="font-weight: bold; font-size: 59px; color: rgb(220,53,69);">T</h4>
+                        <h4 class="align-items-end" style=" font-weight: bold; font-size: 59px; color: rgb(255,193,7);">e</h4>
+                        <h4 class="align-items-end" style=" font-weight: bold; font-size: 59px; color: rgb(13,110,253);">a</h4>
                     </a>
                 </div>
             </div>
@@ -50,20 +49,20 @@
 
                     <span class="navbar-toggler-icon" style="width: 35px;border-bottom-color: rgba(238,242,8,0);box-shadow: 0px 0px;"><i class="fas fa-bars"></i></span>
                 </button>
-                <div class="collapse navbar-collapse text-center d-lg-flex justify-content-lg-center align-items-lg-center" id="navcol-1" style="height: 60px;font-family: Kanit, sans-serif;font-weight: bold;font-size: 23px;color: #fff;position: relative;bottom: -30px;">
+                <div class="collapse navbar-collapse text-center d-lg-flex justify-content-lg-center align-items-lg-center" id="navcol-1" style="height: 60px;font-weight: bold;font-size: 23px;color: #fff;position: relative;bottom: -25px;">
                     <ul class="navbar-nav">
                         <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill " style="color: #fff;background: #03CB8F;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Index">HOME</a></li>
                         <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #9CC624;font-size: 23px;margin: 9px;" asp-area="" asp-controller="CardTables" asp-action="Index">PICTOGRAMA</a></li>
-                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill text-nowrap" style="color: #fff;background: #0d94f5;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Wnoise">W-Noise</a></li>
+                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill text-nowrap" style="color: #fff;background: #0d94f5;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Wnoise">White Noise</a></li>
                         <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FFA012;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Categorias" asp-action="Index">CATEGORIA</a></li>
                         <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FF7223;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Sobre">SOBRE</a></li>
-                        <li class="nav-item" data-bss-hover-animate="pulse"><a class="nav-link border rounded-pill" style="color: #fff;background: #FE4848;font-size: 23px;margin: 9px;" asp-area="" asp-controller="Home" asp-action="Faq">FAQ</a></li>
+                      
                     </ul>
                 </div>
             </div>
         </nav>
 
->
+
 
 
 
@@ -82,29 +81,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 item">
-                    <h3 style="color: #5AAFCC;">Services</h3>
+                    <h3 style="color: #5AAFCC;">Serviços</h3>
                     <ul>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
+                        <li><a asp-area="" asp-controller="CardTables" asp-action="Index">Pictogramas</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Wnoise" >White Noise</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 item">
-                    <h3 style="color: #5AAFCC;">About</h3>
+                    <h3 style="color: #5AAFCC;">Sobre</h3>
                     <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Faq">FAQ</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Sobre">Time</a></li>
+                        
                     </ul>
                 </div>
-                <div class="col-md-6 item text">
-                    <h3 style="color: #5AAFCC;">Company Name</h3>
-                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-                </div>
-                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                
             </div>
-            &copy; 2022 - greenTea - <a asp-area="" asp-controller="Home" asp-action="Privacy">Contatos</a>
-            <p class="copyright">Company Name © 2022</p>
+            
+            <p class="copyright">Green TEA © 2022</p>
         </div>
     </footer>
 

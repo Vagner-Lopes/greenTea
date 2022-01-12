@@ -13,7 +13,7 @@ namespace greenTea.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: @"Server=localhost;Database=greenTea;Integrated Security=True");
+            optionsBuilder.UseSqlServer(connectionString: @"Server=workstation id=greenTea.mssql.somee.com;packet size=4096;user id=vavah_SQLLogin_1;pwd=lwz8mnku8n;data source=greenTea.mssql.somee.com;persist security info=False;initial catalog=greenTea");
         }
     }
 }

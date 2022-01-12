@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/greenteadbserver/databases/greenTea_db",
+      "type": "mssql.azure",
+      "connectionId": "Server=tcp:greenteadbserver.database.windows.net,1433;Initial Catalog=greenTea_db;Persist Security Info=False;User ID=vagner;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

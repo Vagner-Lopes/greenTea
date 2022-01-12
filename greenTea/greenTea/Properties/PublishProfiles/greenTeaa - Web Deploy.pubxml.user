@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUwOzFIPWY0m/rdEN3652uwAAAAACAAAAAAAQZgAAAAEAACAAAABIx8WS4KCjIH/TYYKN11gwVmxPkSe8fgL9alfLWYrP8QAAAAAOgAAAAAIAACAAAACm5mGXr7Qc2aOZlJqYEwt9o9rQrNFi8S/mWl1ZHtiOOoAAAAAwoh8LclkNtHivfIm/DLAkQVD8OmYzh59xVvGqKZ3GXMIfSDVCv46ea8HwIeJqtNyzDL96vbc8sa3jABfTvuaNvYGlbjFqlpJdUwMjMZL/z3DRW4XaC/MoCWtQc88k8tD2KN4i/fCd8yZ+YbE2Fs24Jr8+piN2VwSqfRjTDqMwpEAAAAACb69USaMUK00bnkf8v2zDGfqo0TGiPbCP5XvqZiZuID3CLG2zkc/48lwrA7zvDm2FownbyQTlqXHsMvwMo7U3</EncryptedPassword>
+    <History>True|2022-01-11T19:56:12.3322198Z;True|2022-01-11T15:11:12.1494772-03:00;True|2022-01-11T15:01:54.7658563-03:00;True|2022-01-11T13:51:17.7647164-03:00;False|2022-01-11T13:43:55.3788128-03:00;False|2022-01-11T13:39:50.2271615-03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="greenTea.Models.Contexto">
+      <Value>Data Source=tcp:greenteadbserver.database.windows.net,1433%3bInitial Catalog=greenTea_db%3bUser Id=vagner%40greenteadbserver%3bPassword=Calangov5m6m7m8%40</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
